@@ -16,6 +16,20 @@ Deploy the metadata to your org and assign the "Field Service Long Term Optimiza
 | Parent Optimization Request      | Previous optimization request                                     |
 | Parent Start                     | Reference to the parent start field                               |
 | Sub Request Horizon In Days      | Optimization horizon per request                                  |
-| Sub Request Overlap In Days      | Overlap in days per subsequent request                           
+| Sub Request Overlap In Days      | Overlap in days per subsequent request                            |
 
-Navigate to the Long Term Optimization tab via the App Launcher. On the left you will see the list with Optimization Requests and on the right the component to start a long term optimization request. Select a service territory (for now only one service territory is supported), a start date and how many days to optimize. The overlap between optimization requests defines when the next optimization request starts. Optionally, provide the API name of the Boolean field on the Service Appointment object which is used to determine which appointments are eligible for optimization. 
+Navigate to the Long Term Optimization tab via the App Launcher. On the left you will see the list with Optimization Requests and on the right the component to start a long term optimization request. Select a service territory (for now only one service territory is supported), a start date and how many days to optimize. The overlap between optimization requests defines when the next optimization request starts. Optionally, provide the API name of the Boolean field on the Service Appointment object which is used to determine which appointments are eligible for optimization. Hit the Optimize button to start the process. 
+A new Optimization Request is created using the FSL.OAAS.optimize method, and once that finishes, the next request is started until the entire period has been covered, or if there are no appointment available for optimization. When an optimization request does not complete, the chaining stops.
+
+# Components
+
+| Component                            | Type                    | Description                                                                                                    |
+|--------------------------------------|-------------------------|----------------------------------------------------------------------------------------------------------------|
+| optimizationRequestUtil              | Apex Class              | Implements Queueable to chain a new optimization request from the trigger. Contains AuraEnabled method for LWC |
+| Long_Term_Optimization               | FlexiPage               | Lightning Page with the Optimization Request list view and the LWC                                             |
+| longTermOptimization                 | Lightning Web Component | LWC to create a long term optimization request                                                                 |
+| Long_Optimization_Requests           | List View               | Optimization Request list view                                                                                 |
+| <Fields listed in the table above>   | Custom Field            | Custom fields on the Optimization Request object                                                               |
+| Field_Service_Long_Term_Optimization | Permission Set          | Permission set including the required permissions                                                              |
+| Long_Term_Optimization               | Custom Tab              | Tab for the Lightning Page                                                                                     |
+| OptimizationRequestTrigger           | Apex Trigger            | Trigger to start the next optimization request                                                                 |
