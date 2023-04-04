@@ -7,6 +7,11 @@
     <description>Permissions required for the Long Term Optimization add-on</description>
     <fieldPermissions>
         <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Filter_By_Boolean_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>FSL__Optimization_Request__c.Is_Long_Term_Optimization_Request__c</field>
         <readable>true</readable>
     </fieldPermissions>
