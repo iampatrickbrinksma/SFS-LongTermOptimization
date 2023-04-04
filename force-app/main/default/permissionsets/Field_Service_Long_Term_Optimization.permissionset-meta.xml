@@ -52,4 +52,8 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Field Service Long Term Optimization</label>
+    <tabSettings>
+        <tab>Long_Term_Optimization</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
 </PermissionSet>
