@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Long_Optimization_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Originating_Optimization_Request__c</columns>
+    <columns>FSL__Start__c</columns>
+    <columns>FSL__Finish__c</columns>
+    <columns>FSL__Status__c</columns>
+    <columns>FSL__Objects_To_Schedule__c</columns>
+    <columns>FSL__Objects_Scheduled__c</columns>
+    <columns>FSL__Failure_Reason__c</columns>
+    <columns>FSL__Filter_By_Boolean__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Optimization Requests</label>
+</ListView>
