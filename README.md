@@ -1,6 +1,6 @@
 # Long Term Optimization for Salesforce Field Service
 
-This project is an example how to run Salesforce Field Service Optimization for a longer period than the 21 days that is supported out of the box. It chains Optimization Requests enabling a longer period to be optimized. 
+This project is an example how to run Salesforce Field Service Optimization for a longer period than the 21 days that is supported out of the box. It chains Optimization Requests enabling a longer period to be optimized. The result can of course be different compared to running optimization in a single request for a long period, but that's not possible today. 
 
 # How To Use
 
