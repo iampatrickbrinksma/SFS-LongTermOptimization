@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>optimizationRequestUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Permissions required for the Long Term Optimization add-on</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Is_Long_Term_Optimization_Request__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Long_Term_Request_Finish__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Long_Term_Request_Start__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Originating_Optimization_Request__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FSL__Optimization_Request__c.Parent_Finish__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Parent_Optimization_Request__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>FSL__Optimization_Request__c.Parent_Start__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Sub_Request_Horizon_In_Days__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>FSL__Optimization_Request__c.Sub_Request_Overlap_In_Days__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Field Service Long Term Optimization</label>
+</PermissionSet>

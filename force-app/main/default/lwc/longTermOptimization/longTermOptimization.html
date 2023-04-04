@@ -1,0 +1,82 @@
+<template>
+    <div class="slds-box slds-theme_default slds-is-relative">
+        <div class="spinner">
+            <template if:true={showSpinner}>
+                <lightning-spinner alternative-text="Processing..." variant="brand" size="large">
+                </lightning-spinner>
+            </template>
+        </div>
+        <div class="slds-box slds-theme_default">
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-record-edit-form object-api-name="ServiceAppointment">                           
+                    <lightning-input-field 
+                        name="serviceTerritoryId"
+                        field-name="ServiceTerritoryId" 
+                        variant="label-stacked"
+                        onchange={handle_InputFieldChange} 
+                        required="true">
+                    </lightning-input-field>           
+                </lightning-record-edit-form>    
+            </div>  
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-record-edit-form object-api-name="FSL__Optimization_Request__c">                           
+                    <lightning-input-field 
+                        name="schedulingPolicyId"
+                        field-name="FSL__Scheduling_Policy__c" 
+                        variant="label-stacked"
+                        onchange={handle_InputFieldChange} 
+                        required="true">
+                    </lightning-input-field>           
+                </lightning-record-edit-form>    
+            </div>                        
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-input 
+                    name="start"
+                    label="Start Date"
+                    type="date"
+                    value={fieldValues.start}
+                    onchange={handle_InputFieldChange} 
+                    required="true">
+                </lightning-input>            
+            </div>
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-slider 
+                    name="optimizationHorizon"
+                    label="Optimize for how many days?" 
+                    value={fieldValues.optimizationHorizon}
+                    min="1"
+                    max="21"
+                    onchange={handle_InputFieldChange} >
+                </lightning-slider>                                                             
+            </div>              
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-input
+                    name="overlapInDays"
+                    label="Overlap between optimization requests in days"
+                    type="number"
+                    step="1"
+                    max="20"
+                    value={fieldValues.overlapInDays}
+                    onchange={handle_InputFieldChange}>
+                </lightning-input>                      
+            </div>  
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-input
+                    name="booleanFieldApiName"
+                    label="Filter appointments for optimization by Boolean field on Service Appointment (API Name)"
+                    type="text"
+                    value={fieldValues.booleanFieldApiName}
+                    onchange={handle_InputFieldChange}>
+                </lightning-input>                      
+            </div>              
+            <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-button 
+                    type="submit"
+                    value="startOptimization" 
+                    label="Optimize" 
+                    onclick={handle_Optimize}>
+                </lightning-button>
+            </div>                                    
+        </div>
+    </div>
+</template>
