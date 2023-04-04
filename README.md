@@ -1,18 +1,7 @@
-# Salesforce DX Project: Next Steps
+# Long Term Optimization for Salesforce Field Service
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This project is an example how to run Salesforce Field Service Optimization for a longer period than the 21 days that is supported out of the box. It chains Optimization Requests enabling a longer period to be optimized. 
 
-## How Do You Plan to Deploy Your Changes?
+# How To Use
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Deploy the metadata to your org and assign the "Field Service Long Term Optimization" permission set to your user. Navigate to the Long Term Optimization tab via the App Launcher. On the left you will see the list with Optimization Requests and on the right the component to start a long term optimization request. Select a service territory (for now only one service territory is supported), a start date and how many days to optimize. The overlap between optimization requests defines when the next optimization request starts. Optionally, provide the API name of the Boolean field on the Service Appointment object which is used to determine which appointments are eligible for optimization. 
