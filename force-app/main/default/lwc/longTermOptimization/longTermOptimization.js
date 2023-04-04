@@ -39,13 +39,13 @@ export default class LongTermOptimization extends LightningElement {
             return;
         }
         let start = new Date( Date.parse( this.fieldValues.start ) );
+        let finish = new Date( Date.parse( this.fieldValues.finish ) );
         let today = new Date();
         let startOfToday = new Date( today.getFullYear(), today.getMonth(), today.getDate() );
-        if ( start < startOfToday ) {
-            this.handle_Alert( 'Start Date must be today or in the future!');
+        if ( start < startOfToday || start >= finish) {
+            this.handle_Alert( 'Start Date must be today or in the future and before the End Date!');
             return;
         }
-        this.fieldValues.finish = this.getTheDate( start, this.fieldValues.optimizationHorizon );
         LightningConfirm.open({
             message: 'Are you sure you want to start a long term optimization?',
             variant: 'header',

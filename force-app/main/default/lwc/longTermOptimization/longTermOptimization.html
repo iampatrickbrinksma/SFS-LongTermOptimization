@@ -40,6 +40,16 @@
                 </lightning-input>            
             </div>
             <div class="slds-var-p-around_medium lgc-bg">
+                <lightning-input 
+                    name="finish"
+                    label="End Date"
+                    type="date"
+                    value={fieldValues.finish}
+                    onchange={handle_InputFieldChange} 
+                    required="true">
+                </lightning-input>            
+            </div>            
+            <div class="slds-var-p-around_medium lgc-bg">
                 <lightning-slider 
                     name="optimizationHorizon"
                     label="Optimize for how many days?" 
