@@ -3,7 +3,17 @@
 This project is an example how to run Salesforce Field Service Optimization for a longer period than the 21 days that is supported out of the box. It chains Optimization Requests enabling a longer period to be optimized. The result can of course be different compared to running optimization in a single request for a long period, but that's not possible today. 
 
 ## Disclaimer
-IMPORTANT: This code is not intended to be deployed directly to a Salesforce production environment, but to be used as an example. This is not a Salesforce product and is not officially supported by Salesforce.
+This repository contains code intended to help Salesforce Field Service customers and partners accelerate their implementations. Please note the following:
+* This code is not an official Salesforce product.
+* It is not officially supported by Salesforce.
+* The code serves as an example of how to implement specific functionality or make use of certain features.
+
+Before using this code in a production environment, it is crucial that you:
+* Adopt the code to fit your specific needs.
+* Test thoroughly to ensure it works as expected in your environment.
+* Consider the code to be your own and take full responsibility for its use.
+
+By using this code, you acknowledge that Salesforce is not liable for any issues that may arise from its use.
 
 # How To Use
 
